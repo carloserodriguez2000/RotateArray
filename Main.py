@@ -1,11 +1,11 @@
 ################################################################################
 #
 def shiftRight(aList,indexList,listLen):
-    elementZero = aList[listLen-1]      # Last  element in the list. pop out
+    lastItem = aList[listLen-1]                 # Copy Last element in the list. pop out
     for shifter in indexList:
         if shifter != 0 :
-            aList[shifter] = aList[shifter-1] # Shift all to the right. Note: negative index is cool but will avoid at this time
-    aList[0] = elementZero
+            aList[shifter] = aList[shifter-1]   # Shift all to the right. Note: negative index is cool but will avoid at this time
+    aList[0] = lastItem                         # Put last element at beginning
  
 
 ################################################################################
@@ -25,9 +25,9 @@ def main():
     aList = ['a','b','c','d']   # list of items to shift
     shiftTimes = 3              # How many time to shift
     shiftVector(aList, shiftTimes) # Go Shift vector that many times
-
-
     print (aList)
-
+    
+################################################################################
+#
 main()
 
